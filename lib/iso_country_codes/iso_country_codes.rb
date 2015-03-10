@@ -30,8 +30,6 @@ class IsoCountryCodes # :nodoc:
         instance = all.select { |c| c.alpha3 == code }.first
       end
 
-      return fallback.call "No ISO 3166-1 code could be found for '#{code}'." if instance.nil?
-
       instance
     end
 
